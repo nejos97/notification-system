@@ -59,7 +59,7 @@ func sendKafkaMessage(producer sarama.SyncProducer, users []models.User, ctx *gi
 
 	notificationJSON, err := json.Marshal(notification)
 	if err != nil {
-		return fmt.Errorf("Failed to marshal notication: %w", err)
+		return fmt.Errorf("Failed to marshal notification: %w", err)
 	}
 
 	msg := &sarama.ProducerMessage{
